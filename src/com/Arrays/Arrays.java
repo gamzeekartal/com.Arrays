@@ -6,10 +6,8 @@ public class Arrays {
 		int[] numbers = {1,2,3,4,5,6,7,8,9,10};
 		System.out.println(sumOfNumbers(numbers));
 		addOneToValues(numbers);
-		invenseOrder(numbers);
 		System.out.println("\n");
 		addOneToListMember(numbers);
-		invenseOrder(numbers);
 	}
 	
 	
@@ -21,8 +19,8 @@ public class Arrays {
 		return sum;			
 	}
 	
-	public static void invenseOrder(int[] num){
-		for(int i=num.length-1; i>=0; --i){
+	public static void printList(int[] num){
+		for(int i=0; i<=num.length-1; i++){
 			System.out.print(num[i] +  " ");
 		}		
 	}
@@ -33,12 +31,14 @@ public class Arrays {
 			val=num[i];
 			val=val+1;
 		}
+		printList(num);
 	}
 	
 	public static void addOneToListMember(int[] num){
 		for(int i=0; i<=num.length-1; i++){
 			num[i]=num[i]+1;
-		}		
+		}	
+		printList(num);
 	}
 	
 
